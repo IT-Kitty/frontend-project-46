@@ -45,4 +45,4 @@ const formatStylish = (tree, depth = 1) => {
   return lines.join('\n')
 }
 
-export default tree => `{\n${formatStylish(tree)}\n}\n`
+export default tree => `{\n${formatStylish(tree)}\n}`
