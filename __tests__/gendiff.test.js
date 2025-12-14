@@ -41,3 +41,14 @@ test('plain formatter', () => {
 
   expect(genDiff(file1, file2, 'plain')).toBe(expected)
 })
+
+test('json formatter', () => {
+  const file1 = getFixturePath('file1.json')
+  const file2 = getFixturePath('file2.json')
+  const expected = fs.readFileSync(
+    getFixturePath('expectedJson.txt'),
+    'utf-8',
+  )
+
+  expect(genDiff(file1, file2, 'json')).toBe(expected)
+})
